@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.turnto.com/reviewsfeed" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="reviewsFeed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="itemReviewDimensionDefinition">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="itemReviewDimensionDefinition" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="externalId"/>
+                                        <xs:element type="xs:string" name="name"/>
+                                        <xs:element type="xs:string" name="label"/>
+                                        <xs:element name="categories">
+                                            <xs:annotation>
+                                                <xs:documentation>optional</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="sku" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="hidden"/>
+                                        <xs:element type="xs:string" name="required"/>
+                                        <xs:element name="itemReviewDimensionValueDefinitions">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="itemReviewDimensionValueDefinition">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="externalId"/>
+                                                                <xs:element type="xs:string" name="label"/>
+                                                                <xs:element type="xs:string" name="name"/>
+                                                                <xs:element type="xs:string" name="value"/>
+                                                                <xs:element type="xs:string" name="valueLabel"/>
+                                                                <xs:element type="xs:string" name="type"/>
+                                                                <xs:element type="xs:string" name="sortOrder"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="customProfileDimensionValues">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="customProfileDimensionValue">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="label" />
+                                                                <xs:element type="xs:string" name="name" />
+                                                                <xs:element type="xs:string" name="freeformText" />
+                                                                <xs:element type="xs:string" name="valueLabel"/>
+                                                                <xs:element type="xs:string" name="value"/>
+                                                                <xs:element type="xs:string" name="sortOrder"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reviews">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="review" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="sku"/>
+                                        <xs:element type="xs:string" name="externalId"/>
+                                        <xs:element type="xs:string" name="title"/>
+                                        <xs:element type="xs:string" name="text"/>
+                                        <xs:element type="xs:string" name="submissionTime">
+                                            <xs:annotation>
+                                                <xs:documentation>dd/MM/yyyy</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="rating"/>
+                                        <xs:element type="xs:string" name="hidden">
+                                            <xs:annotation>
+                                                <xs:documentation>true|false</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="user">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="externalId"/>
+                                                    <xs:element type="xs:string" name="firstName"/>
+                                                    <xs:element type="xs:string" name="lastName"/>
+                                                    <xs:element type="xs:string" name="displayName"/>
+                                                    <xs:element type="xs:string" name="emailAddress"/>
+                                                    <xs:element type="xs:string" name="city"/>
+                                                    <xs:element type="xs:string" name="state"/>
+                                                    <xs:element type="xs:string" name="country"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="itemReviewDimensionValues" maxOccurs="1" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="itemReviewDimensionValue" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="externalId"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="itemReviewProfileDimensionValues" maxOccurs="1" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="itemReviewProfileDimensionValue" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="externalId"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="site"/>
+            <xs:attribute type="xs:string" name="dateProduced"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
