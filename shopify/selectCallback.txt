@@ -1,0 +1,9 @@
+// Add to the selectCallback function, or whichever function handles variant selection
+// update turnTo reviews
+if(window.TurnToSKUSetup == "SKU") {
+  TurnToCmd('set', {sku: variant.sku});
+} else if(window.TurnToSKUSetup == "VARIANT") {
+  TurnToCmd('set', {sku: variant.id});
+} else if(window.TurnToSKUSetup == "PRODUCT") {
+  // do nothing;
+}
