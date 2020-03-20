@@ -1,0 +1,25 @@
+{% if first_time_accessed %}
+<script>
+  var orderData = {
+    locale: "en_US",
+    orderId: "{{ order.id }}",
+    email: "{{ order.customer.email }}",
+    postalCode: "{{ order.shipping_address.zip }}",
+    firstName: "{{ order.customer.first_name }}",
+    lastName: "{{ order.customer.last_name }}",
+    items: [
+      {% for item in order.line_items %}
+        {
+          title: "{{ item.title }}",
+          url: "https://{{ shop.domain }}{{ item.url }}",
+          itemImageUrl: "{{ item | img_url: '100x100' }}",
+          price: "{{ item.original_price | divided_by: 100.0 }}",
+          sku: "{{ item.sku }}",
+          variant_id: "{{ item.variant_id }}",
+          product_id: "{{ item.product_id }}"
+        },
+      {% endfor %}
+    ]
+  }
+</script>
+{% endif %}
