@@ -1,0 +1,17 @@
+function generateQuestions(num_questions, num_answers) {
+// Populate 'x Questions' text with the number of questions
+var text = num_questions + ' Question' + (num_questions > 1 ? 's' : '');
+
+// then populate the number of answers
+if (num_answers > 0) {
+ text = text + ', ' + num_answers + ' Answer' + (num_answers > 1 ? 's' : '');
+}
+
+var el = createTeaserElement('a', 'TTteaser__read-qa', text);
+ el.setAttribute('href', '#tt-instant-answers-widget');
+
+//For the Q&A list widget set to the following
+//el.setAttribute('href', '#tt-qa-list');
+
+return el;
+}
