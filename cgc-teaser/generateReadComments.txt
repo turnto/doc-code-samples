@@ -1,0 +1,7 @@
+function generateReadComments(numComments) {
+// Populate the 'x Buyer Comments' text with the number of comments and set
+var text = numComments + ' Buyer Comment' + (numComments > 1 ? 's' : '');
+var el = createTeaserElement('a', 'TTteaser__read-comments', text);
+el.setAttribute('href', '#tt-chatter-widget');
+return el;
+}
