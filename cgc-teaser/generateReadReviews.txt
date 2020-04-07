@@ -1,0 +1,7 @@
+function generateReadReviews(numReviews) {
+// Populate the 'Read x Reviews' text with the number of reviews and set
+var text = 'Read ' + numReviews + ' Review' + (numReviews > 1 ? 's' : '');
+var el = createTeaserElement('a', 'TTteaser__read-reviews', text);
+el.setAttribute('href', '#tt-reviews-list');
+return el;
+}
