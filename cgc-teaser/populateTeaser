@@ -1,0 +1,32 @@
+function populateTeaser(counts) {
+ var fragment = document.createDocumentFragment();
+ if (counts.reviews > 0) { // has reviews
+     fragment.appendChild(generateTeaserStars(counts.avgRating));
+     fragment.appendChild(generateReadReviews(counts.reviews));
+     if (counts.questions > 0) {
+        fragment.appendChild(document.createTextNode(' | '));
+        fragment.appendChild(generateQuestions(counts.questions, counts.answers));
+     } 
+     else if (counts.comments > 3) {
+        fragment.appendChild(document.createTextNode(' | '));
+    fragment.appendChild(generateReadComments(counts.comments));
+     }
+     fragment.appendChild(document.createTextNode(' or '));
+     fragment.appendChild(generateWriteReview('Write a Review'));
+} else { // no reviews
+     if (counts.questions > 0) {
+  fragment.appendChild(generateQuestions(counts.questions,  counts.answers));
+        fragment.appendChild(document.createTextNode(' or '));
+     } 
+     else if (counts.comments > 3) {
+     fragment.appendChild(generateReadComments(counts.comments));
+        fragment.appendChild(document.createTextNode(' or '));
+     }
+     fragment.appendChild(generateWriteReview('Be the first to write a review'));
+}
+ document.getElementById('tt-teaser').appendChild(fragment);
+ // add event listener to handle click to open the write a review screen
+ document.querySelector('.TTteaser__write-review').addEventListener('click',
+   function(e) { TurnToCmd('reviewsList.writeReview');}
+ );
+}
