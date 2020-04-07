@@ -1,0 +1,11 @@
+function loadTeaserCounts(sku) {
+var xhr = new XMLHttpRequest();
+var ugcCountsUrl = 'https://cdn-ws.turnto.com/v5/sitedata/YOUR SITE KEY/' + sku + '/d/ugc/counts/' + turnToConfig.locale;
+xhr.open('GET', ugcCountsUrl, true);
+xhr.addEventListener('load', function() {
+  if (xhr.responseText) {
+    populateTeaser(JSON.parse(xhr.responseText));
+  }
+});
+xhr.send();
+}
