@@ -1,0 +1,3 @@
+function generateWriteReview(text) {
+return createTeaserElement('button', 'TTteaser__write-review', text);
+}
