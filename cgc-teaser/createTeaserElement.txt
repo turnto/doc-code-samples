@@ -1,0 +1,8 @@
+function createTeaserElement(tag, className, text) {
+var el = document.createElement(tag);
+el.setAttribute('class', className);
+if (text) {
+  el.innerText = text;
+}
+return el;
+}
