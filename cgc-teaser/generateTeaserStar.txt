@@ -1,0 +1,38 @@
+function generateTeaserStar(starType) {
+var svgEl = document.createElementNS('https://www.w3.org/2000/svg', 'svg');
+svgEl.setAttribute('class', 'TTteaser__icon--' + starType);
+useEl = document.createElementNS('https://www.w3.org/2000/svg', 'use');
+useEl.setAttributeNS('https://www.w3.org/1999/xlink', 'xlink:href',
+  '#tt-teaser-star--' + starType);
+svgEl.appendChild(useEl);
+var el = createTeaserElement('span', 'TTteaser__star');
+el.appendChild(svgEl);
+return el;
+}
+
+// adjusts/rounds the rating to have decimal value of .0 or .5
+function getAdjustedRating(rating) {
+  var floorValue = Math.floor(rating);
+  var rounded = Math.round(rating * 100) / 100;
+  var decimalValue = parseFloat((rounded - floorValue).toFixed(2));
+  if (decimalValue < 0.25) {
+    return floorValue;
+  } else if (decimalValue < 0.75) {
+    return floorValue + 0.5;
+  }
+  return floorValue + 1;
+}
+function generateTeaserStars(rating) {
+  var el = createTeaserElement('div', 'TTteaser__rating');
+  var adjustedRating = getAdjustedRating(rating);
+  for (var i = 1; i <= 5 ; i++) {
+    if (i > adjustedRating && i - adjustedRating >= 1) {
+      el.appendChild(generateTeaserStar('empty'));
+    } else if (i <= adjustedRating) {
+      el.appendChild(generateTeaserStar('full'));
+    } else {
+      el.appendChild(generateTeaserStar('half'));
+    }
+  }
+  return el;
+}
