@@ -2,8 +2,8 @@
 Copy into: The product block snippet
 Include with: {% include 'tt-collection-rating' %}
 {% endcomment %}
-{% if product.metafields.turnto.product_rating != blank %}
-  {%- assign rating = product.metafields.turnto.product_rating | times: 1 -%}
+{%- assign rating = product.metafields.turnto.product_rating | times: 1 -%}
+{% if rating != blank and rating != 0 %}
   <div class="tt-container tt-product-block">
     <span class="tt-product-block__stars">
       {% for i in (1..5) %}
