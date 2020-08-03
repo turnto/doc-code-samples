@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    var turnToConfig = {
+        locale: "en_US",
+        pageId: "pdp-page",
+        eventHandlers: { 
+            //onInstantAnswerClick: function(){},
+            //onQuestionSubmit: function(evt){},
+            //onAnswerSubmit: function(evt){},
+            //onReviewSubmit: function(evt){},
+            //onCommentSubmit: function(evt){}
+        },
+        qa: {
+            //onFinish: function(){}
+        },
+        reviewsList: {
+            //onFinish: function(){}
+        },
+        gallery: {
+            //onFinish: function(){}
+        },
+        chatter: {
+            //onFinish: function(){}
+        },
+        topComments: {
+            //onFinish: function(){}
+        },
+        commentsPinboardTeaser: {
+            //onFinish: function(){}
+        },
+        vcPinboard: {
+            //onFinish: function(){}
+        }    
+    };
+</script>
