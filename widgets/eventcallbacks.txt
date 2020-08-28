@@ -13,7 +13,8 @@
             //onFinish: function(){}
         },
         reviewsList: {
-            //onFinish: function(){}
+            //onFinish: function(){},
+            //onUpdate: function(){}
         },
         gallery: {
             //onFinish: function(){}
