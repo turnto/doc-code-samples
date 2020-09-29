@@ -1,0 +1,665 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://www.turnto.com/userContent.schema.json",
+  "title": "User Generated Content",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "dateTime": {
+      "$id": "#/definitions/dateTime",
+      "description": "accepts either a yyyy-MM-dd'T'HH:mm:ssZ date format or an empty string",
+      "type": "string",
+      "oneOf": [
+        {
+          "pattern": "[0-9]{4}-[0-1][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-5][0-9]"
+        },
+        {
+          "pattern": "^$"
+        }
+      ]
+    },
+    "question": {
+      "$id": "#/definitions/question",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "#/definitions/question/properties/id",
+          "type": "integer",
+          "minimum": 0
+        },
+        "firstName": {
+          "$id": "#/definitions/question/properties/firstName",
+          "type": "string"
+        },
+        "lastName": {
+          "$id": "#/definitions/question/properties/lastName",
+          "type": "string"
+        },
+        "nickName": {
+          "$id": "#/definitions/question/properties/nickName",
+          "oneOf": [
+            {
+                "type": "null"
+            },
+            {
+                "type": "string"
+            }
+          ]
+        },
+        "ageRange": {
+          "$id": "#/definitions/question/properties/ageRange",
+          "oneOf": [
+            {
+                "type": "null"
+            },
+            {
+                "type": "string"
+            }
+          ]
+        },
+        "location": {
+          "$ref": "#/definitions/location"
+        },
+        "item": {
+          "$ref": "#/definitions/item"
+        },
+        "text": {
+          "$id": "#/definitions/question/properties/text",
+          "type": "string"
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        },
+        "dateTime": {
+          "$ref": "#/definitions/dateTime"
+        },
+        "answers": {
+          "$id": "#/properties/questions/answers",
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/definitions/answer"
+          }
+        }
+      }
+    },
+    "answer": {
+      "$id": "#/definitions/answer",
+      "type": "object",
+      "required": [
+        "id",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "#/definitions/answer/properties/id",
+          "type": "integer",
+          "minimum": 0
+        },
+        "user": {
+          "$ref": "#/definitions/user"
+        },
+        "text": {
+          "$id": "#/definitions/answer/properties/text",
+          "type": "string"
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        },
+        "dateTime": {
+          "$ref": "#/definitions/dateTime"
+        },
+        "replies": {
+          "$id": "#/definitions/answer/properties/replies",
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/definitions/reply"
+          }
+        }
+      }
+    },
+    "reply": {
+      "$id": "#/definitions/reply",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "#/definitions/reply/properties/id",
+          "type": "integer",
+          "minimum": 0
+        },
+        "user": {
+          "$ref": "#/definitions/user"
+        },
+        "text": {
+          "$id": "#/definitions/reply/properties/text",
+          "type": "string"
+        },
+        "dateTime": {
+          "$ref": "#/definitions/dateTime"
+        }
+      }
+    },
+    "comment": {
+      "$id": "#/definitions/comment",
+      "type": "object",
+      "required": [
+        "id",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "#/definitions/comment/properties/id",
+          "type": "integer",
+          "minimum": 0
+        },
+        "user": {
+          "$ref": "#/definitions/user"
+        },
+        "item": {
+          "$ref": "#/definitions/item"
+        },
+        "text": {
+          "$id": "#/definitions/comment/properties/text",
+          "type": "string"
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        },
+        "dateTime": {
+          "$ref": "#/definitions/dateTime"
+        }
+      }
+    },
+    "review": {
+      "$id": "#/definitions/review",
+      "type": "object",
+      "required": [
+        "id",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "#/definitions/review/properties/id",
+          "type": "integer",
+          "minimum": 0
+        },
+        "user": {
+          "$ref": "#/definitions/user"
+        },
+        "item": {
+          "$ref": "#/definitions/item"
+        },
+        "rating": {
+          "$id": "#/definitions/review/properties/rating",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "title": {
+          "$id": "#/definitions/review/properties/title",
+          "oneOf": [
+            {
+                "type": "null"
+            },
+            {
+                "type": "string"
+            }
+          ]
+        },
+        "text": {
+          "$id": "#/definitions/review/properties/text",
+          "oneOf": [
+            {
+                "type": "null"
+            },
+            {
+                "type": "string"
+            }
+          ]
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        },
+        "upVotes": {
+          "$id": "#/definitions/review/properties/upVotes",
+          "type": "integer",
+          "minimum": 0
+        },
+        "downVotes": {
+          "$id": "#/definitions/review/properties/downVotes",
+          "type": "integer",
+          "minimum": 0
+        },
+        "locale": {
+          "$id": "#/definitions/review/properties/locale",
+          "type": "string"
+        },
+        "published": {
+          "$id": "#/definitions/review/properties/published",
+          "enum": [
+            "true",
+            "false"
+          ]
+        },
+        "publishedDate": {
+          "$ref": "#/definitions/dateTime"
+        },
+        "solicitationEmailDate": {
+          "$ref": "#/definitions/dateTime"
+        },
+        "externalOrderId": {
+          "$id": "#/definitions/review/properties/externalOrderId",
+          "type": "string"
+        },
+        "customDimensions": {
+          "$id": "#/definitions/review/properties/customDimensions",
+          "type": "array",
+          "items": {
+            "$id": "#/definitions/review/properties/customDimensions/items",
+            "type": "object",
+            "required": [
+              "type",
+              "name",
+              "label",
+              "customDimensionValue"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "$id": "#/definitions/review/properties/customDimensions/items/properties/type",
+                "type": "string",
+                "enum": [
+                  "Rating",
+                  "Range"
+                ]
+              },
+              "name": {
+                "$id": "#/definitions/review/properties/customDimensions/items/properties/name",
+                "type": "string"
+              },
+              "label": {
+                "$id": "#/definitions/review/properties/customDimensions/items/properties/label",
+                "type": "string"
+              },
+              "customDimensionValue": {
+                "$id": "#/definitions/review/properties/customDimensions/items/customDimensionValue",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "sortOrder": {
+                    "$id": "#/definitions/review/properties/customDimensions/items/properties/customDimensionValue/properties/sortOrder",
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "value": {
+                    "$id": "#/definitions/review/properties/customDimensions/items/properties/customDimensionValue/properties/value",
+                    "type": "integer"
+                  },
+                  "label": {
+                    "$id": "#/definitions/review/properties/customDimensions/items/properties/customDimensionValue/properties/label",
+                    "oneOf": [
+                      {
+                        "type": "array"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "incentivized": {
+          "$id": "#/definitions/review/properties/incentivized",
+          "type": "boolean"
+        },
+        "media": {
+          "$id": "#/definitions/review/properties/media",
+          "type": "array",
+          "items": {
+            "$id": "#/definitions/review/properties/media/items",
+            "type": "object",
+            "required": [
+              "type",
+              "url"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "$id": "#/definitions/review/properties/media/items/properties/type",
+                "type": "string",
+                "enum": [
+                  "photo",
+                  "video"
+                ]
+              },
+              "url": {
+                "$id": "#/definitions/review/properties/media/items/properties/url",
+                "type": "string"
+              },
+              "caption": {
+                "$id": "#/definitions/review/properties/media/items/properties/caption",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "$id": "#/definitions/review/properties/responses",
+          "type": "array",
+          "items": {
+            "$id": "#/definitions/review/properties/responses/items",
+            "type": "object",
+            "required": [
+              "text",
+              "user"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "id": "/definitions/review/properties/responses/properties/text",
+                "type": "string"
+              },
+              "locale": {
+                "id": "/definitions/review/properties/responses/properties/locale",
+                "type": "string"
+              },
+              "dateCreated": {
+                "$ref": "#/definitions/dateTime"
+              },
+              "user": {
+                "$ref": "#/definitions/user"
+              }
+            }
+          }
+        },
+        "dateTime": {
+          "$ref": "#/definitions/dateTime"
+        }
+      }
+    },
+    "location": {
+      "$id": "#/definitions/location",
+      "type": "object",
+      "required": [
+        "city",
+        "state",
+        "country"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "city": {
+          "$id": "#/definitions/location/properties/city",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "state": {
+          "$id": "#/definitions/location/properties/state",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "country": {
+          "$id": "#/definitions/location/properties/country",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    "item": {
+      "$id": "#/definitions/item",
+      "type": "object",
+      "required": [
+        "sku",
+        "brand",
+        "title",
+        "questionCount",
+        "answerCount",
+        "reviewCount",
+        "commentCount",
+        "averageRating"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "sku": {
+          "$id": "#/definitions/item/properties/sku",
+          "type": "string"
+        },
+        "brand": {
+          "$id": "#/definitions/item/properties/brand",
+          "type": "string"
+        },
+        "title": {
+          "$id": "#/definitions/item/properties/title",
+          "type": "string"
+        },
+        "questionCount": {
+          "$id": "#/definitions/item/properties/questionCount",
+          "type": "integer",
+          "minimum": 0
+        },
+        "answerCount": {
+          "$id": "#/definitions/item/properties/answerCount",
+          "type": "integer",
+          "minimum": 0
+        },
+        "reviewCount": {
+          "$id": "#/definitions/item/properties/reviewCount",
+          "type": "integer",
+          "minimum": 0
+        },
+        "commentCount": {
+          "$id": "#/definitions/item/properties/commentCount",
+          "type": "integer",
+          "minimum": 0
+        },
+        "averageRating": {
+          "$id": "#/definitions/item/properties/averageRating",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "tags": {
+      "$id": "#/definitions/question/properties/tags",
+      "oneOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "user": {
+      "$id": "#/definitions/user",
+      "type": "object",
+      "required": [
+        "firstName",
+        "lastName"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "userAuthToken": {
+          "$id": "#/definitions/user/properties/userAuthToken",
+          "type": "string"
+        },
+        "firstName": {
+          "$id": "#/definitions/user/properties/firstName",
+          "type": "string"
+        },
+        "lastName": {
+          "$id": "#/definitions/user/properties/lastName",
+          "type": "string"
+        },
+        "staff": {
+          "$id": "#/definitions/user/properties/staff",
+          "type": "boolean"
+        },
+        "expert": {
+          "$id": "#/definitions/user/properties/expert",
+          "type": "boolean"
+        },
+        "brand": {
+          "$id": "#/definitions/user/properties/brand",
+          "type": "string"
+        },
+        "nickName": {
+          "$id": "#/definitions/user/properties/nickName",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "ageRange": {
+          "$id": "#/definitions/user/properties/ageRange",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "location": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/location"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "customProfileDimensions": {
+          "$id": "#/definitions/user/properties/customProfileDimensions",
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$id": "#/definitions/user/properties/items/customProfileDimensions",
+            "type": "object",
+            "properties": {
+              "type": {
+                "$id": "#/definitions/user/properties/items/customProfileDimensions/properties/type",
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "valueLabel": {
+                "type": "string"
+              },
+              "sortOrder": {
+                "type": "integer"
+              },
+              "freeformText": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "exportStart": {
+      "$id": "#/properties/exportStart",
+      "type": "string",
+      "enum": [
+        "complete"
+      ]
+    },
+    "site": {
+      "$id": "#/properties/site",
+      "type": "string"
+    },
+    "dateCreated": {
+      "$ref": "#/definitions/dateTime"
+    },
+    "questions": {
+      "$id": "#/properties/questions",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "$ref": "#/definitions/question"
+      }
+    },
+    "comments": {
+      "$id": "#/properties/comments",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "$ref": "#/definitions/comment"
+      }
+    },
+    "reviews": {
+      "$id": "#/properties/reviews",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "$ref": "#/definitions/review"
+      }
+    },
+    "exportEnd": {
+      "$id": "#/properties/exportEnd",
+      "type": "string",
+      "enum": [
+        "complete"
+      ]
+    }
+  },
+  "required": [
+    "exportStart",
+    "questions",
+    "comments",
+    "exportEnd"
+  ]
+}

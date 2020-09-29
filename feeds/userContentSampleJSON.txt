@@ -1,0 +1,167 @@
+{
+  "exportStart": "complete",
+  "site": "Seattle Sunglass - v4.3 test",
+  "dateCreated": "2018-03-22T14:22:57+00:00",
+  "questions": [{
+    "id": 268900,
+    "firstName": "Jehan",
+    "lastName": "Jaleel",
+    "nickName": "JJ",
+    "ageRange": "23-40",
+    "location": {
+      "city": "Hebron",
+      "state": "MD",
+      "country": "US"
+    },
+    "item": {
+      "sku": "088989198529",
+      "brand": "",
+      "title": "Jennifer Lawrence Mug",
+      "questionCount": 99,
+      "answerCount": 136,
+      "reviewCount": 207,
+      "commentCount": 77,
+      "averageRating": 3.89
+    },
+    "text": "Would Jennifer go out with me if I bought this mug?",
+    "tags": null,
+    "dateTime": "2018-03-05T18:58:11+0000",
+    "answers": [{
+      "id": 468932,
+      "user": {
+        "firstName": "Jennifer",
+        "lastName": "Lawrence",
+        "nickName": "Jlaw",
+        "ageRange": null,
+        "expert": true,
+        "location": {
+          "city": "Beverly Hills",
+          "state": "CA",
+          "country": "USA"
+        }
+      },
+      "text": "For you Jehan, I think it will",
+      "tags": null,
+      "dateTime": "2018-03-05T20:23:26+0000",
+      "replies": [{
+        "id": 23434,
+        "user": {
+          "firstName": "Natalie",
+          "lastName": "Rushman",
+          "nickName": null,
+          "location": "Salisbury,MD,USA"
+        },
+        "text": "Thank you Jennifer for your answer to our community",
+        "dateTime": "2018-03-05T18:58:11+0000"
+      }]
+    }]
+  }],
+  "comments": [{
+      "id": 877737,
+      "user": {
+        "firstName": "Jehan",
+        "lastName": "Jaleel",
+        "nickName": null
+      },
+      "item": {
+        "sku": "088989198529",
+        "brand": "",
+        "title": "Croakies Sport Eyewear",
+        "questionCount": 99,
+        "answerCount": 136,
+        "reviewCount": 207,
+        "commentCount": 77,
+        "averageRating": 3.89
+      },
+      "text": "Needed some sunglasses for driving",
+      "tags": [
+        "SOT"
+      ],
+      "dateTime": "2018-03-12T17:50:27+0000"
+    },
+    {
+      "id": 877736,
+      "user": {
+        "firstName": "Jenny",
+        "lastName": "McArthy",
+        "nickName": null
+      },
+      "item": {
+        "sku": "700285064826",
+        "brand": "",
+        "title": "Oakley XX Frame Accessory Kit - Black",
+        "questionCount": 1,
+        "answerCount": 1,
+        "reviewCount": 1,
+        "commentCount": 4,
+        "averageRating": 5
+      },
+      "text": "I think I will use this in the future.",
+      "tags": null,
+      "dateTime": "2018-03-12T17:49:10+0000"
+    }
+  ],
+  "reviews": [{
+    "id": 832,
+    "user": {
+      "firstName": "jehan",
+      "lastName": "jaleel",
+      "nickName": null,
+      "ageRange": null,
+      "location": {
+        "city": "Hebron",
+        "state": "MD",
+        "country": "USA"
+      },
+      "customProfileDimensions": [{
+        "type": "Range",
+        "name": "CoffeDrinker",
+        "label": "CoffeDrinker",
+        "valueLabel": "Avid"
+      }]
+    },
+    "item": {
+      "sku": "elcnel1014a",
+      "brand": "EmmaQuality",
+      "title": "Emma Watson Smile Ceramic Coffee Mug",
+      "questionCount": 0,
+      "answerCount": 0,
+      "reviewCount": 1,
+      "commentCount": 0,
+      "averageRating": 5
+    },
+    "title": "Great mug",
+    "text": "This is a great coffee mug, it is strong and sturdy, and I always feed my coffee taste better from a ceremaic mug rather than a plastic cup, please it is more green. The photo of Emma which surrounds the mug is also great, now I can see her lovely smile and beauitufl eyes while I enjoy my morning coffee.",
+    "rating": 5,
+    "upVotes": 0,
+    "downVotes": 0,
+    "locale": "en_US",
+    "published": "true",
+    "publishedDate": "2018-03-21T22:57:04+0000",
+    "tags": null,
+    "solicitationEmailDate": "",
+    "externalOrderId": "990005025",
+    "dateTime": "2018-03-21T18:57:05+0000",
+    "customDimensions": [{
+      "type": "Range",
+      "name": "Fit",
+      "label": "Fit",
+      "customDimensionValue": {
+        "sortOrder": 2,
+        "label": "True to Size"
+      }
+    }],
+    "incentivized": false,
+    "media": [{
+        "type": "photo",
+        "url": "https://www.thefamouspeople.com/profiles/thumbs/emma-watson-3.jpg",
+        "caption": "Yeah!"
+      },
+      {
+        "type": "video",
+        "url": "https://www.youtube.com/watch?v=bxMiLwA3qQ4",
+        "caption": "Yeah!"
+      }
+    ]
+  }]
+}

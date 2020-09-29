@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace='http://www.turnto.com/userContent'
+           xmlns="http://www.turnto.com/userContent"
+           elementFormDefault="qualified"
+>
+    <xs:element name="userContent">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="questions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="question" type="question" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="comments">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="comment" type="comment" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reviews" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="review" type="review" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="site" type="xs:string"/>
+            <xs:attribute name="dateCreated" type="xs:dateTime"/>
+            <xs:attribute name="incremental" type="xs:boolean"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- define the complex types here: -->
+    <xs:complexType name="question">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:sequence minOccurs="0" maxOccurs="1">
+                    <xs:element name="userAuthToken" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="firstName" type="xs:string" />
+                    <xs:element name="lastName" type="xs:string"/>
+                    <xs:element name="nickName" type="xs:string"/>
+                    <xs:element name="ageRange" type="xs:string" minOccurs="0"/>
+                    <xs:element name="location" type="location" minOccurs="0"/>
+                </xs:sequence>
+                <xs:element name="item" type="item"/>
+                <xs:element name="text" type="xs:string"/>
+                <xs:element name="tags" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tag" type="tag" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="dateTime" type="xs:string"/>
+                <xs:element name="answer" type="answer" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:choice>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="answer">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="user" type="user" minOccurs="0"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="tags" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tag" type="tag" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="dateTime" type="xs:string"/>
+            <xs:element name="reply" type="reply" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="reply">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="user" type="user" minOccurs="0"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="dateTime" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="comment">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="user" type="user" minOccurs="0"/>
+            <xs:element name="item" type="item"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="tags" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tag" type="tag" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>            
+            <xs:element name="dateTime" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item">
+        <xs:sequence>
+            <xs:element name="sku" type="xs:string"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name="questionCount" type="xs:integer" />
+            <xs:element name="answerCount" type="xs:integer" />
+            <xs:element name="reviewCount" type="xs:integer" />
+            <xs:element name="commentCount" type="xs:integer" />
+            <xs:element name="averageRating" type="xs:decimal" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="user">
+        <xs:all>
+            <xs:element name="userAuthToken" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="nickName" type="xs:string"/>
+            <xs:element name="brand" type="xs:string" minOccurs="0"/>
+            <xs:element name="expert" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="staff" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="ageRange" type="xs:string" minOccurs="0"/>
+            <xs:element name="location" type="location" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="customProfileDimensions" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="customProfileDimension" type="customProfileDimension" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="review">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="user" type="user"/>
+            <xs:element name="item" type="item"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="rating" type="xs:integer"/>
+            <xs:element name="upVotes" type="xs:integer"/>
+            <xs:element name="downVotes" type="xs:integer"/>
+            <xs:element name="externalOrderId" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="locale" type="xs:string"/>
+            <xs:element name="published" type="xs:boolean"/>
+            <xs:element name="publishedDate" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="solicitationEmailDate" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="tags" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tag" type="tag" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="dateTime" type="xs:string"/>
+            <xs:element name="customDimensions">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="customDimension" type="customDimension" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="syndication" maxOccurs="1" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="name"/>
+                        <xs:element type="xs:string" name="logo" nillable="true"/>
+                        <xs:element type="xs:string" name="url"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="incentivized" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="media" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="url" type="xs:string" />
+                        <xs:element name="caption" nillable="true" type="xs:string" />                        
+                    </xs:sequence>
+                    <xs:attribute name="type">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="photo" />
+                                <xs:enumeration value="video" />
+                                <xs:enumeration value="audio" />
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>                    
+            </xs:element>
+            <xs:element name="responses" minOccurs="0" maxOccurs="1" nillable="true">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="response" type="response" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="response">
+        <xs:sequence>
+            <xs:element name="text" type="xs:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+            <xs:element name="locale" type="xs:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+            <xs:element name="dateCreated" type="xs:dateTime" minOccurs="0" maxOccurs="1" nillable="true"/>
+            <xs:element name="user" type="user" minOccurs="0" maxOccurs="1" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="customDimension">
+        <xs:all>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="label" type="xs:string"/>
+            <xs:element name="customDimensionValue" type="customDimensionValue" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="customDimensionValues" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="customDimensionValue" type="customDimensionValue" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="customDimensionValue">
+        <xs:all>
+            <xs:element name="id" type="xs:integer" minOccurs="0"/>
+            <xs:element name="sortOrder" type="xs:integer" minOccurs="0"/>
+            <xs:element name="value" type="xs:integer" minOccurs="0"/>
+            <xs:element name="label" type="xs:string" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="customProfileDimension">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="label" type="xs:string"/>
+            <xs:choice>
+                <xs:element name="freeformText" type="xs:string"/>
+                <xs:sequence>
+                    <xs:element name="id" type="xs:integer"/>
+                    <xs:element name="valueLabel" type="xs:string"/>
+                    <xs:element name="sortOrder" type="xs:integer" minOccurs="0"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="location">
+        <xs:all>
+            <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="state" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="tag">
+        <xs:sequence>
+            <xs:element type="xs:string" name="code"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

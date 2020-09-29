@@ -1,0 +1,289 @@
+<userContent xmlns="http://www.turnto.com/userContent" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.turnto.com/userContent http://www.turnto.com/schema/userContent.xsd" site="Seattle Sunglass - v4.3 test" dateCreated="2018-03-22T12:49:46+00:00" incremental="false">
+	<questions>
+		<question id="SEYMY0gf">
+			<!-- string version of the question ID in TT DB -->
+			<id>268900</id>
+			<!-- Raw Numeric version of the question ID in TT DB -->
+			<userAuthToken>JRg0onYOnB-ZIl0L1OiURAI5eQqBk3ZT</userAuthToken>
+			<!-- Auth token for user if the site is using SSO -->
+			<firstName>Jehan</firstName>
+			<lastName>Jaleel</lastName>
+			<nickName/>
+			<ageRange>35-40</ageRange>
+			<location>
+				<city>Hebron</city>
+				<state>MD</state>
+				<country>US</country>
+			</location>
+			<item>
+				<sku>088989198529</sku>
+				<title>Jennifer Lawrence Mug</title>
+				<brand/>
+				<questionCount>99</questionCount>
+				<answerCount>136</answerCount>
+				<reviewCount>207</reviewCount>
+				<commentCount>77</commentCount>
+				<averageRating>3.89</averageRating>
+			</item>
+			<text>Would Jennifer go out with me if I bought this mug?</text>
+			<tags/>
+			<dateTime>2018-03-05T18:58:11+0000</dateTime>
+			<answer>
+				<id>468932</id>
+				<user>
+					<firstName>Jennifer</firstName>
+					<lastName>Lawrence</lastName>
+					<nickName>JLaw</nickName>
+					<expert>true</expert>
+					<ageRange>25-30</ageRange>
+					<location>
+						<city>Los Angeles</city>
+						<state>CA</state>
+						<country>US</country>
+					</location>
+				</user>
+				<text>For you Jehan, I think it will.</text>
+				<tags/>
+				<dateTime>2018-03-05T20:23:26+0000</dateTime>
+				<reply>
+					<id>2343</id>
+					<user>
+						<firstName>Natalie</firstName>
+						<lastName>Rushman</lastName>
+						<staff>true</staff>
+						<nickName/>
+						<ageRange/>
+						<location>
+							<city/>
+							<state/>
+							<country/>
+						</location>
+					</user>
+					<text>Thank you Jennifer for your answer to our community</text>
+					<dateTime>2018-03-05T18:58:11+0000</dateTime>
+				</reply>
+			</answer>
+			<answer>
+				<id>468931</id>
+				<user>
+					<firstName>isgnpq</firstName>
+					<lastName>isgnpqLast</lastName>
+					<nickName/>
+					<ageRange/>
+					<location>
+						<city/>
+						<state/>
+						<country/>
+					</location>
+				</user>
+				<text>In your dreams.</text>
+				<tags/>
+				<dateTime>2018-03-05T19:03:59+0000</dateTime>
+			</answer>
+		</question>
+		<question id="SEYMYkEW">
+			<id>268899</id>
+			<item>
+				<sku>700285064895</sku>
+				<title>Oakley Juliet Accessory Kit - Black</title>
+				<brand/>
+				<questionCount>1</questionCount>
+				<answerCount>0</answerCount>
+				<reviewCount>4</reviewCount>
+				<commentCount>0</commentCount>
+				<averageRating>5</averageRating>
+			</item>
+			<text>I have to ask a question for this page?</text>
+			<tags/>
+			<dateTime>2018-03-01T21:12:36+0000</dateTime>
+		</question>
+		<question id="SEYMYkEX">
+			<id>268898</id>
+			<firstName>Moderator</firstName>
+			<lastName>Moderator</lastName>
+			<nickName>Moderator</nickName>
+			<ageRange/>
+			<location>
+				<city/>
+				<state/>
+				<country/>
+			</location>
+			<item>
+				<sku>maui-jim-brown-sport-case</sku>
+				<title>Maui Jim Sport Case - Brown</title>
+				<brand/>
+				<questionCount>1</questionCount>
+				<answerCount>0</answerCount>
+				<reviewCount>1</reviewCount>
+				<commentCount>0</commentCount>
+				<averageRating>2</averageRating>
+			</item>
+			<text>Does this work before i authenticate this user?</text>
+			<tags/>
+			<dateTime>2018-02-27T18:32:31+0000</dateTime>
+		</question>
+	</questions>
+	<comments>
+		<comment>
+			<id>877737</id>
+			<user>
+				<firstName>qdrgbnxn</firstName>
+				<lastName>qdrgbnxnLast</lastName>
+				<nickName/>
+				<ageRange/>
+				<location>
+					<city/>
+					<state/>
+					<country/>
+				</location>
+			</user>
+			<item>
+				<sku>088989198529</sku>
+				<title>Croakies Sport Eyewear Retainer</title>
+				<brand/>
+				<questionCount>99</questionCount>
+				<answerCount>136</answerCount>
+				<reviewCount>207</reviewCount>
+				<commentCount>77</commentCount>
+				<averageRating>3.89</averageRating>
+			</item>
+			<text>Id like to see lots of review solicitation emails come from this transaction.</text>
+			<tags>
+				<tag>
+					<code>SOT</code>
+				</tag>
+			</tags>
+			<dateTime>2018-03-12T17:50:27+0000</dateTime>
+		</comment>
+	</comments>
+	<reviews>
+		<review id="QkEMaEA">
+			<id>81828</id>
+			<user>
+				<firstName>jehan</firstName>
+				<lastName>jaleel</lastName>
+				<nickName>emmawatsonfan</nickName>
+				<ageRange/>
+				<location>
+					<city>Hebron</city>
+					<state>MD</state>
+					<country>US</country>
+				</location>
+				<customProfileDimensions>
+					<customProfileDimension>
+						<type>Range</type>
+						<name>Width</name>
+						<label>Width</label>
+						<id>3453454</id>
+						<valueLabel>Spot on</valueLabel>
+					</customProfileDimension>
+					<customProfileDimension>
+						<type>Freeform Text</type>
+						<name>CoffeeDrinkTimes</name>
+						<label>CoffeeDrinkTimes</label>
+						<freeformText>All the time</freeformText>
+					</customProfileDimension>
+				</customProfileDimensions>
+			</user>
+			<item>
+				<sku>elcnel1014a</sku>
+				<title>Emma Watson Smile Ceramic Coffee Mug</title>
+				<brand>EmmaQuality</brand>
+				<questionCount>6</questionCount>
+				<answerCount>9</answerCount>
+				<reviewCount>34</reviewCount>
+				<commentCount>0</commentCount>
+				<averageRating>4.15</averageRating>
+			</item>
+			<title>Great mug</title>
+			<text>This is a great coffee mug, it is strong and sturdy, and I always feed my coffee taste better from a ceremaic mug rather than a plastic cup, please it is more green. The photo of Emma which surrounds the mug is also great, now I can see her lovely smile and beauitufl eyes while I enjoy my morning coffee.</text>
+			<rating>5</rating>
+			<upVotes>3</upVotes>
+			<downVotes>0</downVotes>
+			<externalOrderId>12976195651</externalOrderId>
+			<locale>en_US</locale>
+			<published>true</published>
+			<publishedDate>2018-03-21T22:01:02+0000</publishedDate>
+			<tags/>
+			<dateTime>2015-05-03T00:00:00+0000</dateTime>
+			<customDimensions>
+				<customDimension>
+					<type>Range</type>
+					<name>Fit5</name>
+					<label>Fit</label>
+					<customDimensionValue>
+						<id>11</id>
+						<sortOrder>2</sortOrder>
+						<label>True to Size</label>
+					</customDimensionValue>
+				</customDimension>
+			</customDimensions>
+			<syndication>
+				<name>caseteesmug</name>
+				<logo>https://wac.edgecastcdn.net/001A39/prod/site/syndicationlogos/662_LH48.png</logo>
+				<url>https://caseteesmug.com</url>
+			</syndication>
+			<incentivized>false</incentivized>
+			<media type="photo">
+				<url>https://www.thefamouspeople.com/profiles/thumbs/emma-watson-3.jpg</url>
+				<caption>Oh yeah!</caption>
+			</media>
+			<responses>
+				<response>
+					<text>Thank you for your review, we love Emma too.</text>
+					<locale>en_US</locale>
+					<dateCreated>2018-04-03T16:06:12</dateCreated>
+					<user>
+						<firstName>Joe</firstName>
+						<lastName>Smith</lastName>
+						<nickName>Joey</nickName>
+						<ageRange>23-31</ageRange>
+						<location>
+							<city>Salisbury</city>
+							<state>MD</state>
+							<country>USA</country>
+						</location>
+					</user>
+				</response>
+			</responses>
+		</review>
+		<review id="QkMF">
+			<id>831</id>
+			<user>
+				<firstName>Pat</firstName>
+				<lastName>Sample</lastName>
+				<nickName/>
+				<ageRange/>
+				<location>
+					<city/>
+					<state/>
+					<country/>
+				</location>
+				<customProfileDimensions/>
+			</user>
+			<item>
+				<sku>100320</sku>
+				<title>\Jockey\ By Sportiqe Long Sleeve Raglan\</title>
+				<brand>Jockey</brand>
+				<questionCount>0</questionCount>
+				<answerCount>0</answerCount>
+				<reviewCount>2</reviewCount>
+				<commentCount>0</commentCount>
+				<averageRating>4</averageRating>
+			</item>
+			<title>Will this get auto moderated?</title>
+			<text>Will this get auto moderated? Will this get auto moderated? Will this get auto moderated? Will this get auto moderated? It should be hidden with a tag.</text>
+			<rating>4</rating>
+			<upVotes>0</upVotes>
+			<downVotes>0</downVotes>
+			<locale>en_US</locale>
+			<published>true</published>
+			<publishedDate>2018-03-21T22:01:02+0000</publishedDate>
+			<tags/>
+			<dateTime>2018-03-21T18:01:02+0000</dateTime>
+			<customDimensions/>
+			<incentivized>false</incentivized>
+		</review>
+	</reviews>
+</userContent>
