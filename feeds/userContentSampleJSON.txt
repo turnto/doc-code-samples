@@ -49,7 +49,8 @@
           "firstName": "Natalie",
           "lastName": "Rushman",
           "nickName": null,
-          "location": "Salisbury,MD,USA"
+          "location": "Salisbury,MD,USA",
+          "staff": true
         },
         "text": "Thank you Jennifer for your answer to our community",
         "dateTime": "2018-03-05T18:58:11+0000"
