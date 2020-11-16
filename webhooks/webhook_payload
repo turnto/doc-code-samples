@@ -156,7 +156,7 @@
                     "authorName": "TurnTo",
                     "authorUrl": "https://www.youtube.com/user/TurnToNetworks",
                     "providerId": "Vr_r2uBg56g",
-                    "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/Vr_r2uBg56g?feature=oembed&rel=0&showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+                    "html": "&lt;iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/Vr_r2uBg56g?feature=oembed&amp;rel=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen&gt;&lt;/iframe&gt;",
                     "s88thumbDims": {
                         "width": 117,
                         "height": 88,
@@ -225,9 +225,8 @@
             "INA"
         ]
     }
-    "subscriptionId": 111,
     "webhookTimestamp": 1573590888727,
     "webhookrequestId": "111__1573590888727__0",
     "entityType": "review",
     "siteKey": "aaabbbccc",
- }
+    }
