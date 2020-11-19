@@ -24,6 +24,10 @@ function getAdjustedRating(rating) {
 }
 function generateTeaserStars(rating) {
   var el = createTeaserElement('div', 'TTteaser__rating');
+  // text element added for screen readers. Won't be visible
+var ratingText = 'Rated ' + rating + ' out of 5 stars';
+var ratingTextEl = createTeaserElement('div', 'TTteaser__rating-text', ratingText);
+el.appendChild(ratingTextEl);
   var adjustedRating = getAdjustedRating(rating);
   for (var i = 1; i <= 5 ; i++) {
     if (i > adjustedRating && i - adjustedRating >= 1) {
