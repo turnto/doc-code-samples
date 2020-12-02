@@ -1,232 +1,255 @@
-    {
-    "eventType": "published",
-    "affectedKey": "top",
-    "entity": {
-        "reviewid": 222,
-        "rating": 4,
-        "title": "An awesome jacket!",
-        "text": "This dinner jacket fits perfects and looks absolutely amazing.",
-        "textLength": 62,
-        "locale": "en_US",
-        "acceptedTermsAndConditions": true,
-        "csFlag": false,
-        "inappropriateFlag": false,
-        "reviewedFlag": true,
-        "autoModerated": false,
-        "published": true,
-        "upVotes": 0,
-        "downVotes": 0,
-        "incentivized": true,
-        "incentiveType": "SWEEPSTAKES",
-        "campaign": "SPRING2021",
-        "orderId": null,
-        "catalogItems": [
-            {
-                "sku": "1234567",
-                "title": "Dinner Jacket",
-                "url": "www.sample.com/products/Dinner Jacket",
-                "category": null,
-                "reviewCount": 1,
-                "ratingCount": 1,
-                "averageRating": 4,
-                "ratingBreakdown": {
-                    "1": 0,
-                    "2": 0,
-                    "3": 0,
-                    "4": 1,
-                    "5": 0
-                },
-                "active": true,
-                "attributes": [
-                    {
-                        "type": "Product group",
-                        "typeLabel": "Product group",
-                        "values": [
-                            {
-                                "value": "Jackets",
-                                "valueLabel": "Jackets"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Assortment type",
-                        "typeLabel": "Assortment type",
-                        "values": [
-                            {
-                                "value": "Clothing",
-                                "valueLabel": "Clothing"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Age group",
-                        "typeLabel": "Age group",
-                        "values": [
-                            {
-                                "value": "Adult",
-                                "valueLabel": "Adult"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "dimensions": [
-            {
-                "type": 1,
-                "dimensionId": 1,
-                "dimensionLabel": "Overall Quality",
-                "id": 4,
-                "code": "Q4",
-                "label": null,
-                "value": 4
-            },
-            {
-                "type": 2,
-                "dimensionId": 2,
-                "dimensionLabel": "Fit",
-                "id": 7,
-                "code": "FIT2",
-                "label": "perfect",
-                "value": null
-            },
-            {
-                "type": 3,
-                "dimensionId": 3,
-                "dimensionLabel": "Occasion",
-                "id": 2,
-                "code": "OCC2",
-                "label": "Formal",
-                "value": null
-            },
-            {
-                "type": 4,
-                "dimensionId": 4,
-                "dimensionLabel": "Impression",
-                "id": 9,
-                "code": "IMP1",
-                "label": "Stylish",
-                "value": null
-            },
-            {
-                "type": 4,
-                "dimensionId": 4,
-                "dimensionLabel": "Impression",
-                "id": 11,
-                "code": "IMP3",
-                "label": "Modern",
-                "value": null
-            }
-        ],
-        "media": {
-            "photo": [
-                {
-                    "id": 11,
-                    "type": "photo",
-                    "caption": "so cool!",
-                    "imageType": "jpeg",
-                    "width": 108,
-                    "height": 109,
-                    "locale": "en_US",
-                    "published": true,
-                    "dateCreated": "2018-08-30T16:15:44-04:00",
-                    "normalUrl": "http://www.turnto.com/imagestore/media/sss-sss/C18B4785A9FC03E7C6C35BE946FA7354_1535660143525_1_L1000.jpeg",
-                    "thumbnailUrl": "http://www.turnto.com/imagestore/media/sss-sss/C18B4785A9FC03E7C6C35BE946FA7354_1535660143525_1_PZ320.jpeg",
-                    "originalUrl": "http://www.turnto.com/imagestore/media/sss-sss/C18B4785A9FC03E7C6C35BE946FA7354_1535660143525_1.jpeg",
-                    "ipViolationFlag": false,
-                    "inappropriateFlag": false,
-                    "offensiveFlag": false,
-                    "spamFlag": false,
-                    "offTopicFlag": false,
-                    "tags": []
-                }
-            ],
-            "video": [
-                {
-                    "id": 12,
-                    "type": "video",
-                    "caption": "build customer community",
-                    "provider": "youtube",
-                    "providedLink": "https://www.youtube.com/watch?v=Vr_r2uBg56g",
-                    "thumbnailUrl": "https://i.ytimg.com/vi/Vr_r2uBg56g/hqdefault.jpg",
-                    "thumbnailWidth": 480,
-                    "thumbnailHeight": 360,
-                    "width": 480,
-                    "height": 270,
-                    "authorName": "TurnTo",
-                    "authorUrl": "https://www.youtube.com/user/TurnToNetworks",
-                    "providerId": "Vr_r2uBg56g",
-                    "html": "&lt;iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/Vr_r2uBg56g?feature=oembed&amp;rel=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen&gt;&lt;/iframe&gt;",
-                    "s88thumbDims": {
-                        "width": 117,
-                        "height": 88,
-                        "scaledTo": "h",
-                        "targetLeft": -15,
-                        "targetTop": 0
-                    },
-                    "s64thumbDims": {
-                        "width": 85,
-                        "height": 64,
-                        "scaledTo": "h",
-                        "targetLeft": -11,
-                        "targetTop": 0
-                    },
-                    "locale": "en_US",
-                    "published": true,
-                    "dateCreated": "2018-08-30T16:15:44-04:00",
-                    "tags": []
-                }
-            ],
-            "audio": []
+{
+  "siteKey": "ZeaequNgafr9koRsite",
+  "siteDisplayName": "All About Coats",
+  "webhookVersion": "1.3.0",
+  "webhookTimestamp": 1581368301529,
+  "webhookRequestId": "6c1ef535-265c-434c-91ef-3ad072bacb00__1581368301529__0",
+  "entityType": "review",
+  "eventType": "PUBLISH",
+  "affectedKey": "top",
+  "entity": {
+    "id": 1,
+    "acceptedTermsAndConditions": true,
+    "autoModerated": true,
+    "catalogItems": [
+      {
+        "sku": "1234567",
+        "title": "Fleece-lined Winter Jacket with Hood",
+        "url": "www.sample.com/products?sku=1234567",
+        "category": "Outerwear",
+        "reviewCount": 1,
+        "ratingCount": 1,
+        "averageRating": 4.5,
+        "ratingBreakdown": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 3,
+          "5": 3
         },
-        "responses": [
-            {
-                "text": "Thank you for your review.",
-                "locale": "en_US",
-                "user": {
-                    "nickName": "Andrew A.",
-                    "firstName": "Andrew",
-                    "lastName": "Adamson",
-                    "emailAddress": "spike@dog.org",
-                    "externalId": null,
-                    "city": null,
-                    "state": null,
-                    "country": null,
-                    "ageRange": null,
-                    "badge": null,
-                    "shopperProfiles": []
-                },
-                "dateCreated": "2018-08-30T16:22:34-04:00"
-            }
-        ],
-        "reviewedDate": "2018-08-30T16:20:32-04:00",
-        "purchaseDate": null,
-        "dateCreated": "2018-08-30T16:15:44-04:00",
-        "user": {
-            "nickName": "Andy",
-            "firstName": "Andrew",
-            "lastName": "Adams",
-            "emailAddress": "aa.89812@mymail.com",
-            "externalId": null,
-            "city": "Springfield",
-            "state": "OH",
-            "country": "US",
-            "ageRange": 2,
-            "badge": null,
-            "shopperProfiles": [
-                {
-                    "id": 3,
-                    "code": "TALL"
-                }
+        "active": true,
+        "attributes": [
+          {
+            "type": "Product group",
+            "typeLabel": "Product group",
+            "values": [
+              {
+                "value": "Jackets",
+                "valueLabel": "Jackets"
+              }
             ]
-        },
-        "tags": [
-            "CSR",
-            "INA"
+          },
+          {
+            "type": "Assortment type",
+            "typeLabel": "Assortment type",
+            "values": [
+              {
+                "value": "Clothing",
+                "valueLabel": "Clothing"
+              }
+            ]
+          },
+          {
+            "type": "Age group",
+            "typeLabel": "Age group",
+            "values": [
+              {
+                "value": "Adult",
+                "valueLabel": "Adult"
+              }
+            ]
+          }
         ]
+      }
+    ],
+    "csFlag": false,
+    "campaign": "SPRING2021",
+    "dateCreated": "2018-08-30T08:51:08+00:00",
+    "dimensions": [
+      {
+        "type": 1,
+        "dimensionId": 1,
+        "dimensionLabel": "Overall Quality",
+        "id": 4,
+        "code": "Q4",
+        "label": null,
+        "value": 4
+      },
+      {
+        "type": 2,
+        "dimensionId": 2,
+        "dimensionLabel": "Fit",
+        "id": 7,
+        "code": "FIT2",
+        "label": "perfect",
+        "value": null
+      },
+      {
+        "type": 3,
+        "dimensionId": 3,
+        "dimensionLabel": "Occasion",
+        "id": 2,
+        "code": "OCC2",
+        "label": "Casual",
+        "value": null
+      },
+      {
+        "type": 4,
+        "dimensionId": 4,
+        "dimensionLabel": "Impression",
+        "id": 9,
+        "code": "IMP1",
+        "label": "Stylish",
+        "value": null
+      },
+      {
+        "type": 4,
+        "dimensionId": 4,
+        "dimensionLabel": "Impression",
+        "id": 11,
+        "code": "IMP3",
+        "label": "Modern",
+        "value": null
+      }
+    ],
+    "downVotes": 1,
+    "inappropriateFlag": false,
+    "incentiveType": "SWEEPSTAKES",
+    "incentivized": true,
+    "locale": "en_US",
+    "media": {
+      "photo": [
+        {
+          "id": 11,
+          "type": "photo",
+          "caption": "so cool!",
+          "imageType": "jpeg",
+          "width": 108,
+          "height": 109,
+          "locale": "en_US",
+          "published": true,
+          "dateCreated": "2018-08-30T16:15:44-04:00",
+          "normalUrl": "http://www.turnto.com/imagestore/media/sss-sss/C18B4785A9FC03E7C6C35BE946FA7354_1535660143525_1_L1000.jpeg",
+          "thumbnailUrl": "http://www.turnto.com/imagestore/media/sss-sss/C18B4785A9FC03E7C6C35BE946FA7354_1535660143525_1_PZ320.jpeg",
+          "originalUrl": "http://www.turnto.com/imagestore/media/sss-sss/C18B4785A9FC03E7C6C35BE946FA7354_1535660143525_1.jpeg",
+          "ipViolationFlag": false,
+          "inappropriateFlag": false,
+          "offensiveFlag": false,
+          "spamFlag": false,
+          "offTopicFlag": false,
+          "tags": [
+            "IVR",
+            "CSA"
+          ]
+        }
+      ],
+      "video": [
+        {
+          "id": 12,
+          "type": "video",
+          "caption": "build customer community",
+          "provider": "youtube",
+          "providedLink": "https://www.youtube.com/watch?v=Vr_r2uBg56g",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Vr_r2uBg56g/hqdefault.jpg",
+          "thumbnailWidth": 480,
+          "thumbnailHeight": 360,
+          "width": 480,
+          "height": 270,
+          "authorName": "TurnTo",
+          "authorUrl": "https://www.youtube.com/user/TurnToNetworks",
+          "providerId": "Vr_r2uBg56g",
+          "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/Vr_r2uBg56g?feature=oembed&rel=0&showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+          "s88thumbDims": {
+            "width": 117,
+            "height": 88,
+            "scaledTo": "h",
+            "targetLeft": -15,
+            "targetTop": 0
+          },
+          "s64thumbDims": {
+            "width": 85,
+            "height": 64,
+            "scaledTo": "h",
+            "targetLeft": -11,
+            "targetTop": 0
+          },
+          "locale": "en_US",
+          "published": true,
+          "dateCreated": "2018-08-30T16:15:44-04:00",
+          "tags": [
+            "SAM",
+            "IVR"
+          ]
+        }
+      ]
+    },
+    "orderId": "KP-12345",
+    "published": true,
+    "purchaseDate": "2018-08-19T11:20:17+00:00",
+    "rating": 4,
+    "responses": [
+      {
+        "text": "Thank you for your review.",
+        "locale": "en_US",
+        "user": {
+          "nickName": "BennyB",
+          "firstName": "Benjamin",
+          "lastName": "Brown",
+          "emailAddress": "bennyb@allaboutcoats.com",
+          "externalId": "ABC123456",
+          "city": "Austin",
+          "state": "TX",
+          "country": "US",
+          "ageRange": 3,
+          "badge": {
+            "text": "AllAboutCoats",
+            "imageUrl": "http://allaboutcoats.com"
+          },
+          "shopperProfiles": [
+            {
+              "id": 1,
+              "code": "MED"
+            }
+          ]
+        },
+        "dateCreated": "2018-10-22T11:05:03+00:00"
+      }
+    ],
+    "reviewedDate": "2018-10-22T11:07:45+00:00",
+    "reviewedFlag": true,
+    "syndication": {
+      "sourceName": "Best Coats",
+      "siteUrl": "http://bestcoats.com",
+      "logoUrl": "http://bestcoats.com/icon"
+    },
+    "tags": [
+      "CSR",
+      "INA"
+    ],
+    "text": "This jacket fits perfectly and looks absolutely amazing.",
+    "textLength": 56,
+    "title": "An awesome jacket!",
+    "upVotes": 3,
+    "user": {
+      "nickName": "AndyA",
+      "firstName": "Andrew",
+      "lastName": "Adams",
+      "emailAddress": "aa.89812@mymail.com",
+      "externalId": "DEF98765",
+      "city": "Springfield",
+      "state": "OH",
+      "country": "US",
+      "ageRange": 2,
+      "badge": {
+        "text": "staff",
+        "imageUrl": "http://clothesandaccessories.com"
+      },
+      "shopperProfiles": [
+        {
+          "id": 3,
+          "code": "TALL"
+        }
+      ]
     }
-    "webhookTimestamp": 1573590888727,
-    "webhookrequestId": "111__1573590888727__0",
-    "entityType": "review",
-    "siteKey": "aaabbbccc",
-    }
+  }
+}
