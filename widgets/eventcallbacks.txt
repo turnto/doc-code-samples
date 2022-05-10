@@ -30,6 +30,17 @@
         },
         vcPinboard: {
             //onFinish: function(){}
-        }    
+        },
+        teaser: {
+            showComments() {
+                // Code to open and go to comments tab
+            },
+            showQa() {
+                // Code to open and go to Q&A list tab
+            },
+            showReviews() {
+                // Code to open and go to reviews summary/list tab
+            }
+        }
     };
 </script>
