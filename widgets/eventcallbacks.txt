@@ -32,18 +32,18 @@
             //onFinish: function(){}
         },
         subdimensionTeaser: {
-            showReviews() {
+            showReviews: function() {
                 // Code to open and go to reviews summary/list tab
             }
         },
         teaser: {
-            showComments() {
+            showComments: function() {
                 // Code to open and go to comments tab
             },
-            showQa() {
+            showQa: function() {
                 // Code to open and go to Q&A list tab
             },
-            showReviews() {
+            showReviews: function() {
                 // Code to open and go to reviews summary/list tab
             }
         }
